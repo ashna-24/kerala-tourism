@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.container{
+    border: none;
+    margin-top: 7%;
+    margin-left: 1.5%;
+}
+.para{
+    border:none;
+    width: 23%;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 32em;
+    padding: 15px;
+    background-color:rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px #333;
+}
+.para h3{
+    text-align: center;
+    text-transform: uppercase;
+    color:bisque
+}
+.para p{
+    line-height: 1.25em;
+    text-align: justify;
+    color: aliceblue;
+}
+.para a{
+    text-decoration: none;
+    color: red;
+}

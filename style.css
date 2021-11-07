@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+}
+header{
+    height: 100vh;
+    -webkit-box-size:cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+img{
+    margin-top: 0.5cm;
+}
+.head-tag{
+    float: right;
+    margin-top: 30px;
+    margin-right: 55px;
+}
+.head-tag a{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid white;
+    padding: 10px;
+    margin-right: 10px;
+}
+.head-tag a:hover{
+    background-color:skyblue;
+    color:black;
+    transition: 0.5s ease-in-out;
+}
+.welcome-text{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+}
+.welcome-text h1{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color:#000;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+.welcome-text a{
+    border:none;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color: seashell;
+}
+.welcome-text a:hover{
+    background: #fff;
+    color: #333;
+}
