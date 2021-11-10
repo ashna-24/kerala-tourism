@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="./login.css">
     </head>
     <body background="images/Lake-in-the-backwaters-of-Kerala.jpg">
         <div class="login-form">
@@ -10,17 +10,18 @@
                 <h1>Login</h1>
             </div>
             <div class="main">
-                <form>
+                <form action="index.html" onsubmit="return validate()">
                     <span>
                         <i class="fa-user"></i>
-                        <input type="text" name="" placeholder="Username">
+                        <input type="text" name="" placeholder="Username"  id="username">
                     </span><br>
                     <span>
                         <i class="fa-lock"></i>
-                        <input type="password" name="" placeholder="Password">
+                        <input type="password" name="" placeholder="Password"  id="pwd"> 
                     </span><br>
-                    <button type="submit">Login</button>
+                    <button type="submit" id="submit">Login</button>
                 </form>
+                <script src="./login.js"></script>
             </div>
         </div>
     </body>
