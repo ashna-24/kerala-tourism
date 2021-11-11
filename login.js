@@ -20,7 +20,6 @@ function validate()
         return false;
     }
     else {
-        return true;
-        
+        return true;    
     }
 }

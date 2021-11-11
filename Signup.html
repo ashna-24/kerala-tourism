@@ -5,7 +5,7 @@
     <link rel="stylesheet" text="text/css" href="./signup.css">
 </head>
 <body background="images/Dazzling-Latest-Wallpaper-Of-Natural-Geography-1024x576.jpg">
-    <form action="Login.html">
+    <form action="Login.html" onsubmit="return signup()">
         <h1> SignUp</h1>
         <input type="text" name="" placeholder="Username">
         <input type="text" name="" list="tech" placeholder="Technology">
@@ -14,12 +14,13 @@
             <option>CSS</option>
             <option>Java script</option>
         </datalist>
-        <input type="email" name="" placeholder="Email">
-        <input type="number" name="" placeholder="Phone_no">
-        <input type="password" name="" placeholder="Password">
-        <input type="password" name="" placeholder="Confirm Password">
-        <button type="submit">SignUp</button>
+        <input type="email" name="" placeholder="Email" id="email">
+        <input type="number" name="" placeholder="Phone_no" id="phno">
+        <input type="password" name="" placeholder="Password" id="password">
+        <input type="password" name="" placeholder="Confirm Password" id="cfmpwd">
+        <label for="error" id="error"></label>
+        <button type="submit" id="submit">SignUp</button>
     </form>
-    
+    <script src="./signup.js"></script>
 </body>
 </html>
