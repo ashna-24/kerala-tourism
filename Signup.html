@@ -5,19 +5,37 @@
     <link rel="stylesheet" text="text/css" href="./signup.css">
 </head>
 <body background="images/Dazzling-Latest-Wallpaper-Of-Natural-Geography-1024x576.jpg">
-    <form action="Login.html" onsubmit="return signup()">
+    <form name="form" action="./Login.html" method="post" onsubmit="return signup()">
         <h1> SignUp</h1>
-        <input type="text" name="" placeholder="Username">
-        <input type="text" name="" list="tech" placeholder="Technology">
+        <div class="form">
+        <input type="text" name="" placeholder="Username" required="" autocomplete="off" id="user">
+        <span id="username" class="text-danger font-weight=bold"></span>
+        </div>
+        <div class="form">
+        <input type="text" name="" list="tech" placeholder="Technology" required="" autocomplete="off">
+        <span id="tech" class="text-danger font-weight=bold"></span>
         <datalist id="tech">
             <option>HTML</option>
             <option>CSS</option>
             <option>Java script</option>
         </datalist>
-        <input type="email" name="" placeholder="Email" id="email">
-        <input type="number" name="" placeholder="Phone_no" id="phno">
-        <input type="password" name="" placeholder="Password" id="password">
-        <input type="password" name="" placeholder="Confirm Password" id="cfmpwd">
+        </div>
+        <div class="form">
+        <input type="email" name="email" placeholder="Email" id="email" required="" autocomplete="off">
+        <span id="email" class="text-danger font-weight=bold"></span>
+        </div>
+        <div class="form">
+        <input type="text" name="mobile" placeholder="Phone_no" id="phno" required="" autocomplete="off">
+        <span id="phone" class="text-danger font-weight=bold"></span>
+        </div>
+        <div class="form">
+        <input type="password" name="password" placeholder="Password" id="password"  required="" autocomplete="off">
+        <span id="password" class="text-danger font-weight=bold"></span>
+        </div>
+        <div class="form">
+        <input type="password" name="password" placeholder="Confirm Password" id="cfmpwd" required="" autocomplete="off">
+        <span id="Confirm" class="text-danger font-weight=bold"></span>
+        </div>
         <label for="error" id="error"></label>
         <button type="submit" id="submit">SignUp</button>
     </form>

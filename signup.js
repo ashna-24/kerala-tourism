@@ -1,8 +1,9 @@
-let email = document.getElementById("email");
-let phonno = document.getElementById("phno");
-let password = document.getElementById("password");
-let cfmpwd = document.getElementById("cfmpwd");
-let error = document.getElementById("error");
+let username = document.getElementById("user").value;
+let email = document.getElementById("email").value;
+let phonno = document.getElementById("phno").value;
+let password = document.getElementById("password").value;
+let cfmpwd = document.getElementById("cfmpwd").value;
+let error = document.getElementById("error").value;
 
 function signup()
 {
@@ -12,17 +13,6 @@ function signup()
         error.innerHTML = "Valid";
         error.style.color = "green";
         return true;
-    }
-    else if(password.value=="")
-    {
-        alert("Password cannot be empty");
-        return false;
-    }
-    else if(password.value.length=8)
-    {
-        alert("Password is not entered");
-        password.style.border="2px solid red";
-        return false;
     }
     else{
         error.innerHTML = "Invalid";
