@@ -7,38 +7,109 @@
 <body background="images/Dazzling-Latest-Wallpaper-Of-Natural-Geography-1024x576.jpg">
     <form name="form" action="./Login.html" method="post" onsubmit="return signup()">
         <h1> SignUp</h1>
-        <div class="form">
         <input type="text" name="" placeholder="Username" required="" autocomplete="off" id="user">
         <span id="username" class="text-danger font-weight=bold"></span>
-        </div>
-        <div class="form">
-        <input type="text" name="" list="tech" placeholder="Technology" required="" autocomplete="off">
-        <span id="tech" class="text-danger font-weight=bold"></span>
+        <input type="text" name="" list="tech" placeholder="Technology" required=""autocomplete="off">
         <datalist id="tech">
             <option>HTML</option>
             <option>CSS</option>
             <option>Java script</option>
         </datalist>
-        </div>
-        <div class="form">
-        <input type="email" name="email" placeholder="Email" id="email" required="" autocomplete="off">
+        <input type="email" name="" placeholder="Email" id="email" required="" autocomplete="off">
         <span id="email" class="text-danger font-weight=bold"></span>
-        </div>
-        <div class="form">
-        <input type="text" name="mobile" placeholder="Phone_no" id="phno" required="" autocomplete="off">
+        <input type="text" name="" placeholder="Phone_no" id="phno" required="" autocomplete="off" value="">
         <span id="phone" class="text-danger font-weight=bold"></span>
-        </div>
-        <div class="form">
-        <input type="password" name="password" placeholder="Password" id="password"  required="" autocomplete="off">
+        <input type="password" name="" placeholder="Password" id="password"  required="" autocomplete="off">
         <span id="password" class="text-danger font-weight=bold"></span>
-        </div>
-        <div class="form">
-        <input type="password" name="password" placeholder="Confirm Password" id="cfmpwd" required="" autocomplete="off">
+        <input type="password" name="" placeholder="Confirm Password" id="cfmpwd" required="" autocomplete="off">
         <span id="Confirm" class="text-danger font-weight=bold"></span>
-        </div>
-        <label for="error" id="error"></label>
         <button type="submit" id="submit">SignUp</button>
     </form>
-    <script src="./signup.js"></script>
+    <script>
+        function signup()
+        {
+            var email=document.getElementById("email").value;
+            let regexp= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/
+            if(regexp.test(email.value))
+            {
+                error.innerHTML = "Valid";
+                error.style.color = "green";
+                return true;
+            }
+            if(email=="")
+            {
+                document.getElementById("email").innerHTML="**Please enter it correctly";
+                return false;
+            }
+            else{
+                error.innerHTML = "Invalid";
+                error.style.color = "red";
+                return false;
+            }
+
+            var phone=document.getElementById("phno").value;
+            if(phone=="")
+            {
+                document.getElementById("phone").innerHTML="**Please enter it correctly";
+                return false;
+            }
+            if(isNaN(phone))
+            {
+                document.getElementById("phone").innerHTML="**only numbers are allowed";
+                return false;
+            }
+            if(phone.length<10)
+            {
+                document.getElementById("phone").innerHTML="**Must be 10 digits numbers";
+                return false;
+            }
+            if(phone.length>10)
+            {
+                document.getElementById("phone").innerHTML="**only be 10 digits numbers are allowed";
+                return false;
+            }
+            if((phone.charAt(0)!=9)&&(phone.charAt(0)!=8)&&(phone.charAt(0)!=7))
+            {
+                document.getElementById("phone").innerHTML="**Must start with 9/8/7";
+                return false;
+            }
+
+            var username=document.getElementById("user").value;
+            if(username.value=="")
+            {
+                document.getElementById(username).innerHTML="**Username cannot be empty";
+                return false;
+            }
+
+            var password=document.getElementById("password").value;
+            if(password.value=="")
+            {
+                document.getElementById(password).innerHTML="Password cannot be empty";
+                return false;
+            }
+            if(password.value.length=8)
+            {
+                document.getElementById(password).innerHTML="Password is not entered";
+                password.style.border="2px solid red";
+                return false;
+            }
+
+            var Confirm=document.getElementById("cfmpwd").value;
+            if(Confirm.value=="")
+            {
+                document.getElementById(Confirm).innerHTML="Password cannot be empty";
+                return false;
+            }
+            if(Confirm.value.length=8)
+            {
+                document.getElementById(Confirm).innerHTML="Password is not entered";
+                Confirm.style.border="2px solid red";
+                return false;
+            }
+            else {
+                return true;    
+            }
+        }
+    </script>
 </body>
 </html>
